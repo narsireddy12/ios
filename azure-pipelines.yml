@@ -7,13 +7,13 @@ pool:
   vmImage: 'macOS-latest'
 
 variables:
-  scheme: ''
+  scheme: 'iOSHelloWorld'
   sdk: 'iphoneos'
   configuration: 'Release'
 steps:
 - task: Xcode@5
   inputs:
-    scheme: ''
+    scheme: '$(scheme)'
     sdk: '$(sdk)'
     configuration: '$(configuration)'
     xcodeVersion: 'default' # Options: 8, 9, default, specifyPath

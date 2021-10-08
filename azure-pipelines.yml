@@ -19,6 +19,13 @@ steps:
     xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
     packageApp: false
+- task: CocoaPods@0
+  inputs:
+    forceRepoUpdate: true
+    projectDirectory: '$(system.defaultWorkingDirectory)'
+  displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
+
+
   
 
 
